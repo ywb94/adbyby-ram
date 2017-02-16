@@ -14,7 +14,7 @@ Adbyby Run In Ram
 特性
 ---
 
-软件包包含 adbyby的luci控制界面  
+软件包包含 adbyby的luci控制界面，自动下载可执行文件  
 
 对FLASH空间需求很小，开机后在线下载adbyby并在ram中运行，不占用flash空间
 
@@ -53,7 +53,7 @@ Adbyby Run In Ram
    
 安装
 --- 
-   
+   ```
    #安装软件包
    opkg install /tmp/luci-app-adbyby*_all.ipk 
    ```
@@ -64,5 +64,7 @@ Adbyby Run In Ram
 
 截图  
 ---
+![luci000](http://iytc.net/img/ad1.jpg)
+
 
   [S]: https://wiki.openwrt.org/doc/howto/obtain.firmware.sdk
