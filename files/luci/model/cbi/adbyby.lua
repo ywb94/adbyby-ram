@@ -64,9 +64,9 @@ local m_enable=luci.http.formvalue("cbid.adbyby.adbyby.enable")
  luci.sys.call("/etc/init.d/adbyby_ram enable")
  luci.sys.call("/etc/init.d/adbyby_ram start")
  end
-luci.sys.call("sleep 1")
 
-luci.http.redirect(luci.dispatcher.build_url("admin/services/adbyby")) 
+
+--luci.http.redirect(luci.dispatcher.build_url("admin/services/adbyby")) 
 end
 
 return m

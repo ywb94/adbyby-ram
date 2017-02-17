@@ -19,6 +19,31 @@ done
 mkdir -p adbyby 
 #tar -zvxf 7620n.tar.gz -C ./adbyby 
 tar -zvxf ar71xx.tar.gz -C ./adbyby 
+
+#更新一次规则
+murl=`cat /tmp/adbyby/bin/update.info|grep lazy.txt|awk '{print $1}'`
+
+if [ ${#murl} -gt 5 ] ;then
+murl2=`cat /tmp/adbyby/bin/update.info|grep lazy.txt|awk '{print $2}'`
+mfile="/tmp/adbyby/bin"${murl2//\\//}
+wget $murl -O $mfile
+fi
+
+murl=`cat /tmp/adbyby/bin/update.info|grep video.txt|awk '{print $1}'`
+if [ ${#murl} -gt 5 ] ;then
+murl2=`cat /tmp/adbyby/bin/update.info|grep video.txt|awk '{print $2}'`
+mfile="/tmp/adbyby/bin"${murl2//\\//}
+wget $murl -O $mfile
+fi
+
+murl=`cat /tmp/adbyby/bin/update.info|grep user.action|awk '{print $1}'`
+if [ ${#murl} -gt 5 ] ;then
+murl2=`cat /tmp/adbyby/bin/update.info|grep user.action|awk '{print $2}'`
+mfile="/tmp/adbyby/bin"${murl2//\\//}
+wget $murl -O $mfile
+fi
+
+
 cd ./adbyby/bin
 ./startadbb
 

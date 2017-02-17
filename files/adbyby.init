@@ -14,8 +14,8 @@ START=80
 
 
 start() {
-local adbyby_enable=$(uci get adbyby.adbyby.enable)
-if [ $adbyby_enable == 0 ]; then
+/etc/init.d/adbyby_ram enabled
+if [ $? == 1 ]; then
     return
 fi
 #≤ª÷ÿ∏¥∆Ù∂Ø
